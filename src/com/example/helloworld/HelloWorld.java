@@ -15,7 +15,7 @@ public class HelloWorld {
         System.exit(0);
     }
 
-    //lif
+    //l
 
     private static void hello()
     {
