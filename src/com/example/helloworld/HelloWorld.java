@@ -14,8 +14,8 @@ import sun.util.resources.cldr.ebu.CalendarData_ebu_KE;
  */
 
 // TODO sanitize inputs, note:  input has ranges - no decimals, invaild dates e.g: 31st feb or sybmols
-
 // TODO learn clean code, Architecture, Model View Controller (implication of multiple files), create object - encapsulation
+// TODO create Trello account, share on point is version control system
 
 /*
  virtual methods of objects is accessed by the dot
@@ -24,8 +24,6 @@ read on virtual method objects - object oriented concept
  objects read about
  google
 */
-
-// TODO create Trello account, share on point is version control system
 
 // get answers in days, or try leap
 public class HelloWorld {
