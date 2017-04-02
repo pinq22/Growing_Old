@@ -77,57 +77,42 @@ public class HelloWorld {
 
         String [] month_name = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"};
 
-        for (int i = 0; i < 12; i++) //L3
-        {
-            if( i == month)
+        if(year >=0 && year <= current_year ) {
+            for (int i = 0; i < 12; i++) //L3
             {
-                if (i == 0 || i == 2 ||i == 4 ||i == 6 ||i == 7 ||i == 9 || i ==11)
-                {
-                    for (int x = 1; x <= 31; x++)
-                    {
-                        if( x == date)
-                        {
-                         JOptionPane.showMessageDialog(null,"There are " + diff +" days left until your " + age + " birthday");
+                if (i == month) {
+                    if (i == 0 || i == 2 || i == 4 || i == 6 || i == 7 || i == 9 || i == 11) {
+                        for (int x = 1; x <= 31; x++) {
+                            if (x == date) {
+                                JOptionPane.showMessageDialog(null, "There are " + diff + " days left until your " + age + " birthday");
+                            }
                         }
-                    }
-                }
-                else if (i == 1) // Feb = 29
-                {
-                    if (isLeapYear)
+                    } else if (i == 1) // Feb = 29
                     {
-                        for (int z = 1; z <= 29; z++)
-                        {
-                            if( z == date)
-                            {
-                                JOptionPane.showMessageDialog(null,"There are " + diff +" days left until your " + age + " birthday");
+                        if (isLeapYear) {
+                            for (int z = 1; z <= 29; z++) {
+                                if (z == date) {
+                                    JOptionPane.showMessageDialog(null, "There are " + diff + " days left until your " + age + " birthday");
+                                }
+                            }
+                        } else {
+                            for (int z = 1; z <= 28; z++) {
+                                if (z == date) {
+                                    JOptionPane.showMessageDialog(null, "There are " + diff + " days left until your " + age + " birthday");
+                                }
+                            }
+                        }
+                    } else {
+                        for (int z = 1; z <= 30; z++) {
+                            if (z == date) {
+                                JOptionPane.showMessageDialog(null, "There are " + diff + " days left until your " + age + " birthday");
                             }
                         }
                     }
-                    else
-                    {
-                        for (int z = 1; z <= 28; z++)
-                        {
-                            if( z == date)
-                            {
-                                JOptionPane.showMessageDialog(null,"There are " + diff +" days left until your " + age + " birthday");
-                            }
-                        }
-                    }
+                    System.out.println(month_name[i]);
                 }
-                else
-                {
-                  for (int z = 1; z <= 30; z++)
-                        {
-                            if( z == date)
-                            {
-                                JOptionPane.showMessageDialog(null,"There are " + diff +" days left until your " + age + " birthday");
-                            }
-                        }
-                }
-                System.out.println(month_name[i]);
             }
         }
-
        // System.out.println(dateobj.getTime());   //return the millisecond since current date
        // System.out.println(dates.getTime());
        // System.out.println(df.format(diff));
